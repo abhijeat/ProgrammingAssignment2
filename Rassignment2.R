@@ -1,5 +1,13 @@
+# Function to create Matrix variable
+
 makeCacheMatrix <- function(x)
 {  inv_matx <- NULL
+
+ 
+   # Following function sets a square matrix in cache
+
+
+
    set_sqr_matrix <-  function( x)
     { 
 
@@ -24,7 +32,14 @@ makeCacheMatrix <- function(x)
 
     set_sqr_matrix(x)
 
+
+    # Function to return the matrix saved in cache
+
     get_matrix <- function() matx
+
+
+
+    #Function set inverse matrix
 
     set_inverse <- function(fixed_inv_mat) inv_matx <<- fixed_inv_mat
 
@@ -37,6 +52,8 @@ makeCacheMatrix <- function(x)
 
  }
 
+
+# CacheSolve checks if the matrix is available in cache before calling solve function
 
 
 
@@ -72,4 +89,3 @@ cacheSolve <- function(x,...)
     x$set_inverse(inv_mat1)
     inv_mat1
   }
-
