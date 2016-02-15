@@ -74,7 +74,7 @@ cacheSolve <- function(x,...)
 
     sqr_matx <- x$get_matrix()
 
-    
+    # If the matrix is not invertible, solve function will return error. Hence return null.
 
     if ( det(sqr_matx) == 0)
     
@@ -86,6 +86,8 @@ cacheSolve <- function(x,...)
 
       inv_mat1 <- solve(sqr_matx)
       }
+      
+      # Set inverse matrix in caceh 
 	
     x$set_inverse(inv_mat1)
     inv_mat1
