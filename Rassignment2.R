@@ -61,7 +61,8 @@ cacheSolve <- function(x,...)
  {
    inv_mat1 <- x$get_inverse()
 
-   
+
+  # following condition checks if the inverse is a matrix. If not it gets cached data
    if( is.matrix(inv_mat1)  )
    
    
