@@ -59,10 +59,11 @@ makeCacheMatrix <- function(x)
 
 cacheSolve <- function(x,...)
  {
+   # Get the inverse matrix from cache
    inv_mat1 <- x$get_inverse()
 
 
-  # following condition checks if the inverse is a matrix. If not it gets cached data
+  # following condition checks if the inverse retrieved is a matrix or Null. If it is a matrix it can be returned
    if( is.matrix(inv_mat1)  )
    
    
@@ -72,6 +73,7 @@ cacheSolve <- function(x,...)
 	return(inv_mat1)
      }
 
+   # Retrieve square matrix 
     sqr_matx <- x$get_matrix()
 
     # If the matrix is not invertible, solve function will return error. Hence return null.
